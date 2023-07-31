@@ -100,8 +100,7 @@ async def call_repeat(callback: types.CallbackQuery, state: FSMContext):
 
     await state.set_state(Pharmacologenetics.type.state)
     kb = await inline_menu_start()
-    await callback.message.answer('Выберите какое фармакогенетическое тестирование было проведено:')
-    await callback.message.answer('Было проведено выбранное фармакогенетическое тестирование:', reply_markup=kb)
+    await callback.message.answer('Выберите какое фармакогенетическое тестирование было проведено:', reply_markup=kb)
 
 
 async def call_back(callback: types.CallbackQuery, state: FSMContext):
