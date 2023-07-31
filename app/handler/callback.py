@@ -21,7 +21,7 @@ async def call_type(callback: types.CallbackQuery, state: FSMContext):
 
     kb = await inline_menu_first_parameter()
 
-    await callback.message.answer("Укажите первый параметр <b>ABCB1C3433T</b>", reply_markup=kb)
+    await callback.message.answer("Укажите первый параметр <b>ABCB1 C3433T</b>", reply_markup=kb)
 
 
 async def call_first(callback: types.CallbackQuery, state: FSMContext):
@@ -73,7 +73,7 @@ async def call_allele(callback: types.CallbackQuery, state: FSMContext):
 
     await state.set_state(Pharmacologenetics.allele)
 
-    await callback.message.answer("Подскажите <b>CYP2C19 Аллель</b>", reply_markup=kb)
+    await callback.message.answer("Укажите <b>CYP2C19 Аллель</b>", reply_markup=kb)
 
 
 async def call_end(callback: types.CallbackQuery, state: FSMContext):
@@ -100,6 +100,7 @@ async def call_repeat(callback: types.CallbackQuery, state: FSMContext):
 
     await state.set_state(Pharmacologenetics.type.state)
     kb = await inline_menu_start()
+    await callback.message.answer('Выберите какое фармакогенетическое тестирование было проведено:')
     await callback.message.answer('Было проведено выбранное фармакогенетическое тестирование:', reply_markup=kb)
 
 

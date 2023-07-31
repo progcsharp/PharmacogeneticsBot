@@ -26,6 +26,7 @@ async def inline_menu_second_parameter():
         InlineKeyboardButton(text='Гомозигота GG', callback_data="GGG"),
         InlineKeyboardButton(text='Гомозигота AA', callback_data="GAA"),
         InlineKeyboardButton(text='Гетерозигота GA', callback_data="GetGA"),
+        InlineKeyboardButton(text='Гомозигота GA', callback_data="GGA"),
         InlineKeyboardButton(text='⬅️Назад', callback_data="back:2")
     ]
     return kb.add(*buttons)
