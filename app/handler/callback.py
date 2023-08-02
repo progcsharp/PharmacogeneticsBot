@@ -21,7 +21,7 @@ async def call_type(callback: types.CallbackQuery, state: FSMContext):
 
     kb = await inline_menu_first_parameter()
 
-    await callback.message.answer("Укажите первый параметр <b>ABCB1 C3433T</b>", reply_markup=kb)
+    await callback.message.answer("Укажите первый параметр <b>ABCB1 C3435T</b>", reply_markup=kb)
 
 
 async def call_first(callback: types.CallbackQuery, state: FSMContext):
